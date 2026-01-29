@@ -1,6 +1,6 @@
 project_attributes = {
     "jithin-gcp-1234"                            = {
-        billing_account                   = "014D0D-FC86D0-4DECE5"
+        billing_account                   = "0129E0-5398F2-40F4C2"
         requestor                         = "jtihin"
         team_dl                           = "publiccloud-engineering"
         usecase                           = "test project for tfe"
