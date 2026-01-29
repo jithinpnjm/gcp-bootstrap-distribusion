@@ -9,3 +9,4 @@ project_attributes = {
         services_enable                   = ["compute.googleapis.com","cloudresourcemanager.googleapis.com","logging.googleapis.com","secretmanager.googleapis.com","storage.googleapis.com","binaryauthorization.googleapis.com","sqladmin.googleapis.com","container.googleapis.com",]
     },
 }
+
