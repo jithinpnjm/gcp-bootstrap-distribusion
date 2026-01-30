@@ -1,6 +1,6 @@
 terraform {
   backend "gcs" {
-    bucket = "tf-state-allex-dev-gke"
+    bucket = "tf-state-ds-dev"
     prefix = "terraform/state"
   }
   required_providers {
