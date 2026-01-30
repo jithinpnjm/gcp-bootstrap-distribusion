@@ -31,6 +31,7 @@ allowed_image_registries = [
   "gcr.io/*",
   "us-docker.pkg.dev/*",
   "ghcr.io/*",
+  "docker.io/vikunja/*",
 ]
 
 
