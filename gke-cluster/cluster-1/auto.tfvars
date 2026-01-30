@@ -40,7 +40,7 @@ node_pool_attributes = {
     node_max_surge_on_upgrades       = 1
     node_max_unavailable_on_upgrades = 0
     taints_configs                   = []
-    nodepool_locations               = ["us-central1-a", ]
+    nodepool_locations               = ["us-central1-a" ]
     pod_secondary_range              = ""
     node_image_type                  = "cos_containerd"
   }
