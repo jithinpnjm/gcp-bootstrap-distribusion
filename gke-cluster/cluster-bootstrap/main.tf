@@ -97,6 +97,7 @@ resource "google_container_node_pool" "node_pools" {
   location   = var.cluster_location
   node_count = each.value["node_count"]
   version    = each.value["version"]
+  max_pods_per_node = each.value["max_pods"]
 
   node_locations = length(each.value["nodepool_locations"]) == 0 ? var.node_locations : each.value["nodepool_locations"]
 
