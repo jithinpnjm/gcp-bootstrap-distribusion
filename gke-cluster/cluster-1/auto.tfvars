@@ -1,5 +1,5 @@
 project_id                = "jithin-gcp-1234"
-gke_version               = "1.28.9-gke.1000000"
+gke_version               = "1.33.5-gke.2100000"
 name                      = "ds-gke-test-01"
 cluster_location          = "us-central1"
 node_locations            = ["us-central1-a", "us-central1-b", "us-central1-f"]
@@ -31,7 +31,7 @@ node_pool_attributes = {
   "ds-generic-pool-1" = {
     node_count                       = 1
     disk_size_gb                     = 100
-    version                          = "1.28.9-gke.1000000"
+    version                          = "1.33.5-gke.2100000"
     disk_type                        = "pd-standard"
     machine_type                     = "e2-standard-2"
     max_pods                         = 110
