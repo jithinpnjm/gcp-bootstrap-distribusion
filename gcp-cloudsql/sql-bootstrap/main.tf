@@ -44,6 +44,7 @@ resource "google_sql_database" "databases" {
   for_each = var.databases
 
   name     = each.value.db_name
+  project = var.project_id
   instance = module.postgresql_db.instance_name
 }
 
@@ -51,6 +52,7 @@ resource "google_sql_user" "users" {
   for_each = var.databases
 
   name     = each.value.user_name
+  project = var.project_id
   instance = module.postgresql_db.instance_name
   password = data.google_secret_manager_secret_version.db_user_passwords[each.key].secret_data
 }

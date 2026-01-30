@@ -6,7 +6,7 @@ db_instance_name    = "vikunja-production-db"
 tier                = "db-custom-2-7680"
 disk_size            = 20
 
-root_password_secret = "allex-secret-postgres-postgres-password"
+root_password_secret = "db_root_pass"
 
 databases = {
   vikunja = {
