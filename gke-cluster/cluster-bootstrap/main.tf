@@ -19,7 +19,15 @@ resource "google_container_cluster" "base" {
     channel = var.gke_upgrade_channel
   }
 
-  enable_binary_authorization = true
+  binary_authorization {
+    evaluation_mode = "PROJECT_SINGLETON_POLICY_ENFORCE"
+  }
+  gateway_api_config {
+    channel = "CHANNEL_STANDARD"
+  }
+  secret_manager_config {
+    enabled = true
+  }
   enable_intranode_visibility = true
 
   master_auth {
@@ -41,12 +49,7 @@ resource "google_container_cluster" "base" {
     config_connector_config {
       enabled = var.addon_config_connector_config
     }
-    gateway_api_config {
-      channel = "CHANNEL_STANDARD"
-    }
-    secret_manager_config {
-    enabled = true
-  }
+    
   }
 
   lifecycle {
