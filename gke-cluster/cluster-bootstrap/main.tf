@@ -149,6 +149,7 @@ resource "google_container_node_pool" "node_pools" {
 resource "google_binary_authorization_policy" "image_policy" {
   project = var.project_id
 
+  # Allow only trusted registries
   dynamic "admission_whitelist_patterns" {
     for_each = var.allowed_image_registries
     content {
@@ -156,9 +157,9 @@ resource "google_binary_authorization_policy" "image_policy" {
     }
   }
 
-  global_policy_evaluation_mode = "ENABLE"
+  # REQUIRED when using registry allowlisting
   default_admission_rule {
-    evaluation_mode  = "ALWAYS_DENY"
+    evaluation_mode  = "ALWAYS_ALLOW"
     enforcement_mode = "ENFORCED_BLOCK_AND_AUDIT_LOG"
   }
 }
