@@ -35,12 +35,12 @@ node_pool_attributes = {
     disk_type                        = "pd-standard"
     machine_type                     = "e2-standard-2"
     max_pods                         = 110
-    auto_scaling_max_nodes           = 3
+    auto_scaling_max_nodes           = 1
     auto_scaling_min_nodes           = 0
     node_max_surge_on_upgrades       = 1
     node_max_unavailable_on_upgrades = 0
     taints_configs                   = []
-    nodepool_locations               = ["us-central1-a", "us-central1-b", "us-central1-f"]
+    nodepool_locations               = ["us-central1-a", ]
     pod_secondary_range              = ""
     node_image_type                  = "cos_containerd"
   }
