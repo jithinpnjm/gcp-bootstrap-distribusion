@@ -8,12 +8,10 @@ resource "google_container_cluster" "base" {
   default_max_pods_per_node = var.default_max_pods_per_node
   remove_default_node_pool  = true
   initial_node_count        = 1
-  
   network    = var.network
   subnetwork = var.subnetwork
-
+  deletion_protection = false
   datapath_provider = "ADVANCED_DATAPATH"
-
   min_master_version = var.gke_version
   release_channel {
     channel = var.gke_upgrade_channel
