@@ -29,6 +29,7 @@ resource "google_project" "project" {
   name            = each.value["project_display_name"]
   project_id      = each.key
   billing_account = each.value["billing_account"]
+  deletion_policy = "DELETE"
   folder_id           = each.value["folder_id"]
   labels = {
     owner_id        = each.value["requestor"]
