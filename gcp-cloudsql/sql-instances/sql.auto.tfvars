@@ -3,7 +3,7 @@ region              = "us-central1"
 network             = "projects/jithin-gcp-1234/global/networks/us-central1-ds-vpc-01"
 
 db_instance_name    = "vikunja-production-db"
-tier                = "db-custom-2-7680"
+tier                = "db-g1-small"
 disk_size            = 20
 
 root_password_secret = "db_root_pass"
