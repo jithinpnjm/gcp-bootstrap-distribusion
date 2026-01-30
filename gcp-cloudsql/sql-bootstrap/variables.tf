@@ -10,27 +10,40 @@ variable "network" {
   type = string
 }
 
-variable "db_name" {
+variable "db_instance_name" {
+  type = string
+}
+
+variable "database_version" {
   type    = string
-  default = "vikunja-app-db"
+  default = "POSTGRES_15"
 }
 
 variable "tier" {
-  type    = string
-  default = "db-custom-2-7680"
+  type = string
 }
 
 variable "disk_size" {
-  type    = number
-  default = 20
+  type = number
+}
+
+variable "root_password_secret" {
+  type = string
+}
+
+variable "databases" {
+  type = map(object({
+    db_name         = string
+    user_name       = string
+    password_secret = string
+  }))
+  default = {}
 }
 
 variable "vpc_peering_address" {
-  type    = string
-  default = "10.8.0.0"
+  type = string
 }
 
 variable "vpc_peering_range_prefix" {
-  type    = string
-  default = "16"
+  type = number
 }
