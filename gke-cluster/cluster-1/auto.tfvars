@@ -25,7 +25,14 @@ addon_http_load_balancing           = true
 addon_gce_persistent_disk_csi_driver_config = true
 addon_dns_local_cache               = true
 
-allowed_image_registries = ["docker.io/*", "us-docker.pkg.dev/*", "gcr.io/*",]
+allowed_image_registries = [
+  "docker.io/*",
+  "quay.io/*",
+  "gcr.io/*",
+  "us-docker.pkg.dev/*",
+  "ghcr.io/*",
+]
+
 
 node_pool_attributes = {
   "ds-generic-pool-1" = {
