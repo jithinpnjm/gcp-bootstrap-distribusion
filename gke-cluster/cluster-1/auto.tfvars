@@ -55,3 +55,5 @@ node_pool_attributes = {
     node_image_type                  = "cos_containerd"
   }
 }
+
+
