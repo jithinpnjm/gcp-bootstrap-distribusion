@@ -5,3 +5,4 @@ secret_list = [
   "vikunja-db-password",
   "keycloak-db-password"
 ]
+
