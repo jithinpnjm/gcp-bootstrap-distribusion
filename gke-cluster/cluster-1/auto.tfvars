@@ -33,7 +33,7 @@ allowed_image_registries = [
   "ghcr.io/*",
   "docker.io/vikunja/*",
   "docker.io/bitnami/*",
-  "docker.io/bitnamilegacy/*,
+  "docker.io/bitnamilegacy/*",
 ]
 
 
