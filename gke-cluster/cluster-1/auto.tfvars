@@ -32,6 +32,7 @@ allowed_image_registries = [
   "us-docker.pkg.dev/*",
   "ghcr.io/*",
   "docker.io/vikunja/*",
+  "docker.io/bitnami/*"
 ]
 
 
