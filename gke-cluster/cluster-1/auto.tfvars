@@ -2,7 +2,7 @@ project_id                = "jithin-gcp-1234"
 gke_version               = "1.33.5-gke.2100000"
 name                      = "ds-gke-test-01"
 cluster_location          = "us-central1"
-node_locations            = ["us-central1-a", "us-central1-f",]
+node_locations            = ["us-central1-a", "us-central1-f","us-central1-c"]
 network                   = "projects/jithin-gcp-1234/global/networks/us-central1-ds-vpc-01"
 subnetwork                = "projects/jithin-gcp-1234/regions/us-central1/subnetworks/us-central1-ds-vpc-1-sb-01"
 master_private_cidr_block = "192.168.33.0/28"
@@ -50,11 +50,10 @@ node_pool_attributes = {
     node_max_surge_on_upgrades       = 1
     node_max_unavailable_on_upgrades = 0
     taints_configs                   = []
-    nodepool_locations               = ["us-central1-a", "us-central1-f",]
+    nodepool_locations               = ["us-central1-a", "us-central1-f","us-central1-c"]
     pod_secondary_range              = ""
     node_image_type                  = "cos_containerd"
   }
 }
-
 
 
