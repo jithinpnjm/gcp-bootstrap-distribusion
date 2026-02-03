@@ -96,6 +96,6 @@ jobs:
 
       - name: Terraform Apply
         if: github.ref == 'refs/heads/main' && github.event_name == 'push'
-        run: terraform apply -var-file=${{ env.varfile_location }} -auto-approve
+        run: terraform destroy -var-file=${{ env.varfile_location }} -auto-approve
         env:
           GOOGLE_CREDENTIALS: ${{ secrets.GOOGLE_CREDENTIALS }}
