@@ -6,3 +6,5 @@ secret_list = [
   "keycloak-db-password"
 ]
 
+
+
